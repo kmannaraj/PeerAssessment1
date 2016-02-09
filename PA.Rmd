@@ -3,14 +3,18 @@ title: "PA"
 output: html_document
 ---
 
-```{r, echo=TRUE}
+```{r}
 
 library(knitr)
 library(dplyr)
 library(ggplot2)
 library(lattice)
+```
+
+```{r,}
 
 # Loading Data
+
 activity <- read.csv("D:/RCoursera/Reproducible Research/Week1/Data/activity.csv", colClass=c('integer', 'Date', 'integer'))
 
 # What is mean total number of steps taken per day?
@@ -74,5 +78,5 @@ activity$day <- as.factor(day(activity$date))
 str(activity)
 
 steps.interval <- aggregate(steps ~ interval + day, activity, mean)
-xyplot(steps ~ interval | day, data=steps.interval, layout=c(2,1), type='l')
+xyplot(steps ~ interval | day, data=steps.interval, layout=c(1,2), type='l')
 ```
