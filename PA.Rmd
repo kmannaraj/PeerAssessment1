@@ -4,6 +4,11 @@ output: html_document
 keep_md: TRUE
 ---
 
+```{r global_options, include=TRUE}
+knitr::opts_chunk$set(fig.width=12, fig.height=8, fig.path='Figs/',
+                      echo=TRUE, warning=FALSE, message=FALSE)
+```
+
 ```{r}
 
 library(knitr)
