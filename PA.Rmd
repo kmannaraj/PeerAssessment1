@@ -19,7 +19,7 @@ steps.date <- aggregate(steps ~ date, activity, sum)
 
 head(steps.date)
 
-barplot(steps.date$steps, names.arg=steps.date$date, ylim=c(0, 25000), xlab="date", ylab="sum(steps)",col = 'Red')
+barplot(steps.date$steps, names.arg=steps.date$date, ylim=c(0, 25000), xlab="date", ylab="sum(steps)",col='Red')
 
 mean(steps.date$steps)
 
